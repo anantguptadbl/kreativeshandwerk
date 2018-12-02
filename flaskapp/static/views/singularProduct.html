@@ -1,0 +1,20 @@
+<div ng-app="App">
+<div ng-controller="singularProductController">
+ 
+<div class="container" ng-init="getCurrentProduct()">
+	<h1>{{curProduct}}</h1>
+	<div> Description : {{curProductDescription}}</div>
+	<p>Price : {{curProductPrice}}</p>
+	<p>Details : {{curProductDetails}}</p>
+</div>
+
+<!-- We will now slide over all the images -->
+<div ng-repeat="curImage in curProductImages">
+	<img ng-src="static/assets/img/{{curImage}}"></img>
+	</br>
+	</br>
+</div>
+	
+  
+</div>
+</div>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App" style="background-color:white">
+<head>
+
+<!-- Meta Data -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Set the Title -->
+<title>Kreative Handwerks</title>
+
+<!-- External StyleSheet references -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- External JS Links -->
+<script src="https://code.angularjs.org/1.2.16/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.2.16/angular-route.min.js"></script>
+<script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-messages.min.js"></script> -->
+
+
+<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+e.preventDefault();
+$("#wrapper").toggleClass("toggled");
+});
+</script>
+
+<style>
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+</style>
+
+<!-- Internal Resources -->
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/router.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/about.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/contact.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/singularProduct.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/controllers/collection.js') }}"></script>
+
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://openlayers.org/en/v4.6.4/css/ol.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/app.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/simple-sidebar.css') }}">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" >
+<link href="https://rawgit.com/angular/bower-material/master/angular-material.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+
+<!--
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/app.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/general.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/font-awesome.css') }}">
+-->
+<link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:300,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+</head>
+
+<!-- Start of the Body -->
+<body style="background-color:white">
+	<!-- Header Portion -->	
+	<header>
+	<div align="center">
+	    <h1>Kreativ Handwerks</h1>
+	</div>
+	</header>
+
+	<!-- <div id="wrapper" class="toggled">
+
+	<div id="sidebar-wrapper">
+	    <ul class="sidebar-nav">
+		<li>
+		    <a href="#/collection">Collection</a>
+		</li>
+		<li>
+		    <a href="#/about">About</a>
+		</li>
+
+		<li>
+		    <a href="#/contact">Contact</a>
+		</li>
+	    </ul>
+	</div>
+	-->
+
+	<!-- <div class="container"> -->
+		<!--
+		<div id="wrapper" class="toggled">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#/collection">Collection</a></li>
+				<li><a href="#/about">Menu 1</a></li>
+				<li><a href="#/contact">Menu 2</a></li>
+			</ul> 		
+		</div>
+		-->
+<!--
+		<li ng-class="getTabClass(1)" ng-click="setActiveTab(1)"><a  href="#/collection">Collection</a></li>
+	  	<li ng-class="getTabClass(2)" ng-click="setActiveTab(2)"><a  href="#/about">About</a></li>
+		<li ng-class="getTabClass(3)" ng-click="setActiveTab(3)"><a  href="#/contact">Contact</a></li>
+		
+	<li ng-class="getTabClass(1)" ng-click="setActiveTab(1)"><a href="#deal" data-toggle="tab">Deal</a></li>
+         <li ng-class="getTabClass(2)" ng-click="setActiveTab(2)"><a href="#bond" data-toggle="tab">Bond</a></li>
+         <li ng-class="getTabClass(3)" ng-click="setActiveTab(3)"><a href="#collateral" data-toggle="tab">Collateral</a></li>
+         <li ng-class="getTabClass(4)" ng-click="setActiveTab(4)"><a href="#rating" data-toggle="tab">Rating</a></li>
+-->
+
+	<!-- End of using pills -->
+
+	<!-- Page Content -->
+
+	<div id="page-content-wrapper">
+		<div ng-view></div>
+	</div>
+	<!-- /#page-content-wrapper -->
+
+
+
+
+	<!-- Signature -->
+	<!--
+	<footer>
+	    <div class="container">
+		<p><a class="github" href="https://github.com/anantguptadbl">Anant Gupta</a></p>
+	    </div>
+	</footer>
+	-->
+
+</body>
+</html>

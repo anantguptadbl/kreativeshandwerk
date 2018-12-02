@@ -1,0 +1,21 @@
+<div ng-app="App">
+<div ng-controller="collectionController">
+ 
+<div class="container" ng-init="collectionPageInit()">
+  <div class="well" align="center">
+	
+	<div class="col-md-12" style="padding-left:0px;padding-right:0px;">
+		<input class="col-md-12" type="text" ng-model="user_filter" style="padding-left:0px; padding-right:0px;"/>
+	</div>
+	
+	<!-- Module to Inject the Images -->
+	<div ng-repeat="curProduct in imageCollection">
+		<a href="#/singularProduct">
+			<img ng-src="static/assets/img/{{curProduct}}" ng-click="collectionProductHit(curProduct)"></img>
+		</a>
+	</div>
+  </div>
+</div>
+
+</div>
+</div>
